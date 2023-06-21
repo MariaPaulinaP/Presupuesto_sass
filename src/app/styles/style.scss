@@ -1,0 +1,91 @@
+@import 'universals';
+@import 'variables';
+@import 'mixings';
+
+.header{
+    &__nav{
+        width: 38%;
+        display: flex;
+        justify-content: space-between;
+        h1{
+            color: $color-primary;
+        }
+    }
+}
+
+.button{
+    @include buttons();
+    &--nav{
+        background-color: $color-primary;
+        color: #fff;
+        width: 18%;
+        &:hover{
+            border: 1px solid $color-primary;
+            color: $color-primary;
+        }
+    }
+    &--success{
+        background-color: $color-success;
+        color: #fff;
+        width: 40%;
+        margin-left: 10rem;
+
+        &:hover{
+            border: 1px solid  $color-success;
+            color:  $color-success;
+        }
+    }
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 8px;
+    margin-right: 4rem;
+
+    &__label{
+        font-size: 14px;
+        color: $color-primary;
+        font-weight: 600;
+    }
+
+    &__input{
+        padding: 5px 10px;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid $color-primary;
+    }
+
+    &__select{
+        color: $color-primary;
+    }
+}
+
+.main__table{
+    border: 1px solid $color_lines;
+    border-collapse: collapse;
+    margin: 15px;
+    width: 60%;
+    &--head{
+        background-color: $color_violetaClaro;
+        color:black;
+    }
+    &--body{
+        background-color: $color_violetaBlanco;
+    }
+}
+
+th{
+    @include lines($color_lines)
+}
+td{
+    @include lines($color_lines)
+}
+
+.button--delete{
+    color: rgb(220, 89, 89);
+}
+.button--edit{
+    color: rgb(89, 89, 194);
+}

@@ -1,0 +1,21 @@
+@import 'variables';
+
+
+@mixin buttons (){
+ border: none;
+ width: 10%;
+ padding: 5px 10px;
+ border-radius: 5px;
+ margin: 10px;
+ &:hover{
+    background-color: transparent;
+    cursor: pointer;
+ }
+}
+
+@mixin lines($color){
+   border: 1px solid $color;
+   padding: 3px 6px;  
+}
+
+
